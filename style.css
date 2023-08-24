@@ -1,0 +1,87 @@
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body, html{
+    background-image: linear-gradient(to top, #49a09d, #5f2c82);
+    background-repeat: no-repeat;
+    height: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    
+}
+
+#main{
+    background-color: rgba(255, 255, 255, 0.582);
+    width: 1200px;
+    height: 1000px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#main h1{
+    text-align: center;
+}
+
+#main p{
+    width: 100%;
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+#main input{
+    margin-top: 30px;
+    width: 93%;
+    height: 40px;
+    font-size: 1.3rem;
+    color: white;
+    border-radius: 15px;
+    border: #49a09d;
+    background-color: #602c828a;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 0px 10px 0px 10px;
+}
+
+#main input::placeholder{
+    color: white;
+}
+
+#tableNumbers{
+    width: 90%;
+    margin: 30px 0px 0px 40px;
+    height: 500px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#tableNumbers td{
+    background-color: white;
+    border: 1px solid black;
+    
+}
+
+#btn{
+    font-size: 1.3rem;
+    height: 45px;
+    border: none;
+    border-radius: 15px;
+    width: 93%;
+    margin-top: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#btn:hover{
+    border: 1px solid #5f2c82;
+    cursor: pointer;
+}
+
+
+
+
+
