@@ -3,10 +3,20 @@ const guardarLocalStorage = (client) => localStorage.setItem(`rifa`, JSON.string
 const pegarLocalStorage = () => JSON.parse(localStorage.getItem('rifa')) ?? []
 
 const td = document.querySelectorAll('td')
+const btnSorteio = document.getElementById('btnSorteio')
 
 const limpaInputs = () =>{
     document.getElementById('inputNome').value = ''
     document.getElementById('inputNumero').value = ''
+}
+
+const colorTable = () =>{
+    const dbClient = pegarLocalStorage()
+
+    dbClient.map((arr) =>{
+        console.log(arr)
+        td.item(arr.numero - 1).style.backgroundColor = '#49a09d'
+    })
 }
 
 const jaExisteCadastro = (client) =>{
@@ -15,12 +25,10 @@ const jaExisteCadastro = (client) =>{
 
     dbClient.map((item, index) =>{
         if(item.numero === client.numero){
-            console.log('São iguais')
-            console.log(item.numero)
-            console.log(client.numero)
-
-            alert('Este número já foi cadastrado')
-            localStorage.removeItem(item.numero)
+            document.getElementById('erro').style.display = 'block'
+            document.getElementById('sucesso').style.display = 'none'
+            //alert('Este número já foi cadastrado')
+            client.numero.pop()
         } 
         /*else{
             guardarLocalStorage(dbClient)
@@ -36,21 +44,18 @@ const cadastraContribuinte = () =>{
         numero: document.getElementById('inputNumero').value
     }
 
-    const dbClient = pegarLocalStorage()
-
     if(client.nome === '' || client.numero === ''){
         alert('Preencha todos os campos!')
     } else if(jaExisteCadastro(client)){
         alert('Este número já foi cadastrado')
     } else{
-        createClient(client)
-        if(td.item(client.numero - 1).innerText === client.numero){
-            td.item(client.numero - 1).style.backgroundColor = '#49a09d'
-        }
+        document.getElementById('sucesso').style.display = 'block'
+        document.getElementById('erro').style.display = 'none'
+        setTimeout(() =>{
+            createClient(client)
+            location.reload()
+        }, 2000)
     }
-
-    //console.log(td.item(client.numero - 1))
-    //console.log(client.numero)
 }
 
 const createClient = (client) =>{
@@ -59,3 +64,17 @@ const createClient = (client) =>{
     guardarLocalStorage(dbClient)
     limpaInputs() 
 }
+
+colorTable()
+
+/*
+btnSorteio.addEventListener('click', () =>{
+    const dbClient = pegarLocalStorage()
+    console.log(dbClient)
+    console.log(dbClient.length)
+    if(dbClient.length == 100){
+        console.log('Número de pessoas atingido')
+    }
+})
+*/
+

@@ -144,9 +144,18 @@
                 <td id="100">100</td>
             </tr>
         </table>
+
+        <div id="errorNumber">
+            <p id="erro">Este número já foi cadastrado</p>
+
+            <p id="sucesso">Cadastrando participante...</p>
+        </div>
+
         <input type="text" placeholder="Nome do contribuinte" data-index="new" name="" id="inputNome">
         <input type="number" placeholder="Número escolhido" name="" id="inputNumero">
         <button id="btn" onclick="cadastraContribuinte()">Adicionar</button>
+
+        <button id="btnSorteio">Sortear Participante</button>
     </div>
     <script src="index.js"></script>
 </body>
