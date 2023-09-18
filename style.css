@@ -7,7 +7,7 @@
 body, html{
     background-image: linear-gradient(to top, #49a09d, #5f2c82);
     background-repeat: no-repeat;
-    height: 1100px;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,10 +18,10 @@ body, html{
 #main{
     background-color: rgba(255, 255, 255, 0.582);
     width: 1200px;
+    padding: 10px 0px 50px 0px;
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    padding-bottom: 50px;
 }
 
 #main h1{
@@ -38,7 +38,7 @@ body, html{
 #main input{
     margin-top: 30px;
     width: 93%;
-    height: 40px;
+    height: 60px;
     font-size: 1.3rem;
     color: white;
     border-radius: 15px;
@@ -50,6 +50,10 @@ body, html{
 
 #main input::placeholder{
     color: white;
+}
+
+#main-division{
+    display: flex;
 }
 
 #tableNumbers{
@@ -66,11 +70,66 @@ body, html{
     
 }
 
+#inputs{
+    margin-top: 2 0px;
+    width: 50%;
+    
+}
+
+#inputs p{
+    text-align: center;
+    padding: 20px 30px 0px 10px;
+    font-size: 1.2rem;
+}
+
+#btn{
+    font-size: 1.3rem;
+    height: 60px;
+    border: none;
+    border-radius: 15px;
+    width: 93%;
+    margin-top: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: #5f2c82;
+}
+
+#btn:hover{
+    border: 1px solid #5f2c82;
+    cursor: pointer;
+}
+
+#btn-sorteio{
+    font-size: 1.3rem;
+    height: 70px;
+    border: none;
+    border-radius: 15px;
+    width: 93%;
+    margin-top: 40px;
+    background-color: #49a09d; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#btn-sorteio:hover{
+    border: 1px solid #00fff7;
+    cursor: pointer;
+}
+
+#participanteSorteado{
+    background-color: rgba(255, 255, 255, 0.582);
+    width: 800px;
+    padding: 10px 0px 50px 0px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+
 #errorNumber{
     width: 50%;
     text-align: center;
     margin: 0 auto;
-    margin-bottom: 10px;
+    margin-top: 50px;
 }
 
 #erro{
@@ -87,36 +146,53 @@ body, html{
     background-color: #49a09d;
 }
 
-#btn{
+#loadingParticipante{
+    font-size: 5rem;
+    text-align: center;
+    display: none;
+}
+
+#participanteSorteado{
+    width: 1100px;
+    display: none;
+    padding: 60px 15px 60px 15px;
+}
+
+#numeroSorteado{
+    width: 90px;
+    margin: 0 auto;
+    border-radius: 70px;
+    background-color: black;
+    color: white;
+    font-size: 5rem;
+    margin-top: 20px;
+}
+
+#nomeParticipante{
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+#participanteSorteado span{
+    font-size: 5rem;
+}   
+
+#participanteSorteado button {
     font-size: 1.3rem;
-    height: 45px;
+    height: 60px;
     border: none;
     border-radius: 15px;
     width: 93%;
-    margin-top: 30px;
+    margin-top: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: #49a09d;
 }
 
-#btn:hover{
-    border: 1px solid #5f2c82;
+#participanteSorteado button:hover {
     cursor: pointer;
 }
 
-#btnSorteio{
-    font-size: 1.3rem;
-    background-color: #49a09d;
-    height: 45px;
-    border: none;
-    border-radius: 15px;
-    width: 93%;
-    margin-top: 50px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
 
-#btnSorteio:hover{
-    border: 1px solid #5f2c82;
-    cursor: pointer;
-}
 
 
 
